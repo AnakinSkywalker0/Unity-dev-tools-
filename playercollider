@@ -1,0 +1,17 @@
+using UnityEngine;
+using UnityEngine.AI;
+
+public class PlayerCollison : MonoBehaviour
+{
+    public PlayerMovement movement;
+    void OnCollisionEnter (Collision collisioninfo)
+       
+    {
+        if (collisioninfo.collider.tag == "obstacle")
+        {
+            movement.enabled = false ;
+        }
+
+
+    }
+}
